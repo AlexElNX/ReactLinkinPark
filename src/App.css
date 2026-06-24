@@ -1,0 +1,134 @@
+.band {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+/* HEADER */
+.bandHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.logoDiv img {
+    display: block;
+    width: 370px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff2d2d;
+    box-shadow: 0 0 35px rgba(255, 45, 45, 0.45);
+    transition: 0.3s;
+}
+
+.logoDiv img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 55px rgba(255, 45, 45, 0.6);
+}
+
+.bandInfo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bandInfo h1 {
+    font-size: 55px;
+    color: #ff2d2d;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255, 45, 45, 0.35);
+}
+
+.bandInfo p {
+    font-size: 21px;
+    color: #c9c9c9;
+    margin-top: 15px;
+}
+
+/* SECTIONS (UPDATED NEON STYLE) */
+.bandBiography,
+.bandAlbums,
+.bandMembers {
+    margin-top: 50px;
+    padding: 25px 60px;
+
+    background: rgba(255, 45, 45, 0.04);
+    border: 1px solid rgba(255, 45, 45, 0.25);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+            0 0 10px rgba(255, 45, 45, 0.15),
+            0 0 25px rgba(255, 45, 45, 0.10),
+            0 0 45px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s;
+}
+
+/* HOVER GLOW FOR SECTIONS */
+.bandBiography:hover,
+.bandAlbums:hover,
+.bandMembers:hover {
+    transform: translateY(-3px);
+    box-shadow:
+            0 0 15px rgba(255, 45, 45, 0.25),
+            0 0 35px rgba(255, 45, 45, 0.18),
+            0 0 70px rgba(255, 45, 45, 0.10);
+}
+
+/* TITLES */
+.bandBiography h1,
+.bandAlbums h1,
+.bandMembers h1 {
+    font-size: 40px;
+    color: #ff2d2d;
+    border-bottom: 2px solid rgba(255, 45, 45, 0.25);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+.bandBiography p {
+    font-size: 21px;
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+/* ALBUMS / MEMBERS */
+.albums h2,
+.members h2 {
+    color: #ff2d2d;
+    margin-top: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.albums h2:hover,
+.members h2:hover {
+    transform: translateX(6px);
+    text-shadow: 0 0 15px rgba(255, 45, 45, 0.5);
+}
+
+.albums p,
+.members p {
+    color: #d6d6d6;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0b0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff2d2d;
+    border-radius: 10px;
+}

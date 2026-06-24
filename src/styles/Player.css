@@ -1,0 +1,112 @@
+.player {
+    margin-top: 60px;
+    padding: 30px 40px;
+    background: rgba(255, 45, 45, 0.04);
+    border: 1px solid rgba(255, 45, 45, 0.25);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    /* NEON BORDER GLOW */
+    box-shadow:
+            0 0 10px rgba(255, 45, 45, 0.25),
+            0 0 25px rgba(255, 45, 45, 0.15),
+            0 0 45px rgba(255, 45, 45, 0.10);
+}
+
+.player:hover {
+    box-shadow:
+            0 0 15px rgba(255, 45, 45, 0.35),
+            0 0 35px rgba(255, 45, 45, 0.25),
+            0 0 70px rgba(255, 45, 45, 0.15);
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+/* TOP GLOW LINE */
+.player::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 45, 45, 0.6),
+            transparent
+    );
+    animation: glowMove 4s linear infinite;
+}
+
+@keyframes glowMove {
+    0% {
+        transform: translateX(-30%);
+    }
+    100% {
+        transform: translateX(30%);
+    }
+}
+
+/* TITLE */
+.player h1 {
+    font-size: 34px;
+    color: #ff2d2d;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255, 45, 45, 0.35);
+}
+
+/* SONG NAME */
+.player h2 {
+    font-size: 20px;
+    color: #cfcfcf;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* CONTROLS ROW */
+.controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BUTTONS */
+.player button {
+    background: rgba(255, 45, 45, 0.08);
+    border: 1px solid rgba(255, 45, 45, 0.25);
+    color: #ff2d2d;
+    font-size: 22px;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HOVER */
+.player button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(255, 45, 45, 0.15);
+    box-shadow: 0 0 18px rgba(255, 45, 45, 0.35);
+}
+
+/* CLICK */
+.player button:active {
+    transform: translateY(0px) scale(0.98);
+}
